@@ -1,0 +1,15 @@
+{
+    "name": "@fluencelabs/avm-worker-common",
+    "version": "0.1.0",
+    "description": "Commons for AVM Worker",
+    "main": "./dist/index.js",
+    "typings": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsc"
+    },
+    "author": "Fluence Labs",
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "typescript": "^4.0.0"
+    }
+}
