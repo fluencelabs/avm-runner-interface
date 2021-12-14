@@ -1,17 +1,17 @@
-# AVM Worker common types
+# AVM Runner interface
 
-[![npm](https://img.shields.io/npm/v/@fluencelabs/avm-worker-common)](https://www.npmjs.com/package/@fluencelabs/avm-worker-common)
+[![npm](https://img.shields.io/npm/v/@fluencelabs/avm-runner-interface)](https://www.npmjs.com/package/@fluencelabs/avm-runner-interface)
 
-AVM Worker is the abstraction over Aqua virtual machine (AVM) interpreter designed to allow run it in different contexts such as web workers in browsers or worker threads on nodejs. 
+AVM Runner is the abstraction over Aqua virtual machine (AVM) interpreter designed to allow run it in different contexts such as web workers in browsers or worker threads on nodejs.
 
-The package provides common interface for AVM worker implementation as well as necessary TypeScript definitions.
+The package provides common interface for AVM runner implementation as well as necessary TypeScript definitions.
 
 ## Getting started
 
-The main exports of the package is the AVM worker type :
+The main exports of the package is the AVM runner type :
 
 ```typescript
-export type AvmWorker = {
+export type AvmRunner = {
     init: (logLevel: LogLevel) => Promise<void>;
     terminate: () => Promise<void>;
     run: (
@@ -27,17 +27,17 @@ export type AvmWorker = {
 };
 ```
 
-To make a custom AVM worker three functions has to be implemented:
+To make a custom AVM runner three functions has to be implemented:
 
-* init - should allocate any resources needed for AVM worker (such as AVM interpreter memory or background worker state)
-* terminate - should deallocate all the resources used by the AVM worker
-* run - should pass the particle execution to actual AVM interpreter running in the context of implementation
+-   init - should allocate any resources needed for AVM runner (such as AVM interpreter memory or background worker state)
+-   terminate - should deallocate all the resources used by the AVM runner
+-   run - should pass the particle execution to actual AVM interpreter running in the context of implementation
 
 ## Available implementations:
 
--   Single-threaded, ui-blocking: [@fluencelabs/avm-worker](https://github.com/fluencelabs/avm-worker)
--   Web workers based for browsers: [@fluencelabs/avm-worker-web](https://github.com/fluencelabs/avm-worker-background/tree/main/avm-worker-node)
--   Worker threads based for nodejs: [@fluencelabs/avm-worker-node](https://github.com/fluencelabs/avm-worker-background/tree/main/avm-worker-node)
+-   Single-threaded, ui-blocking: [@fluencelabs/avm-runner](https://github.com/fluencelabs/avm-runner)
+-   Web workers based for browsers: [@fluencelabs/avm-runner-web](https://github.com/fluencelabs/avm-runner-background/tree/main/avm-runner-node)
+-   Worker threads based for nodejs: [@fluencelabs/avm-runner-node](https://github.com/fluencelabs/avm-runner-background/tree/main/avm-runner-node)
 
 ## Contributing
 

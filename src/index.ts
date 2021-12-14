@@ -34,7 +34,7 @@ export interface SecurityTetraplet extends ResolvedTriplet {
     json_path: string;
 }
 
-export type AvmWorker = {
+export type AvmRunner = {
     init: (logLevel: LogLevel) => Promise<void>;
     terminate: () => Promise<void>;
     run: (

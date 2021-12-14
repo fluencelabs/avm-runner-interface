@@ -1,7 +1,7 @@
 {
-    "name": "@fluencelabs/avm-worker-common",
+    "name": "@fluencelabs/avm-runner-interface",
     "version": "0.1.0",
-    "description": "Commons for AVM Worker",
+    "description": "Interfaces for AVM Runner",
     "main": "./dist/index.js",
     "typings": "./dist/index.d.ts",
     "scripts": {
