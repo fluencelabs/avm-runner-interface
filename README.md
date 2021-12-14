@@ -35,7 +35,7 @@ To make a custom AVM runner three functions has to be implemented:
 
 ## Available implementations:
 
--   Single-threaded, ui-blocking: [@fluencelabs/avm-runner](https://github.com/fluencelabs/avm-runner)
+-   Single-threaded, ui-blocking: [@fluencelabs/avm-runner-mainthread](https://github.com/fluencelabs/avm-runner-mainthread)
 -   Web workers based for browsers: [@fluencelabs/avm-runner-web](https://github.com/fluencelabs/avm-runner-background/tree/main/avm-runner-node)
 -   Worker threads based for nodejs: [@fluencelabs/avm-runner-node](https://github.com/fluencelabs/avm-runner-background/tree/main/avm-runner-node)
 
